@@ -56,7 +56,7 @@ To attach a worker node on the Ray Cluster after setting up the head node:
 ray start --address=[head-node-private-ip-address]
 ```
 
-## How to Run Experiments 
+## Experiments 
 
 
 **For spark script ,start HDFS, YARN, and Spark cluster and run the spark script**:
