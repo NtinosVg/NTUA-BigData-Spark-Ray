@@ -68,6 +68,6 @@ spark-submit --packages "ch.cern.sparkmeasure:spark-measure_2.12:0.23" <script_f
 **For ray scripts, start the Ray cluster and run the ray script**:
       
 ```bash
-python3 <script_folder>/<script>.py <hdfs:filepath>
+python3 <script_folder/script>.py <hdfs:filepath>
 ```
 
