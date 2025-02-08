@@ -1,5 +1,5 @@
 # NTUA-BigData-Spark-Ray
-Comparison of Python's scaling frameworks, Ray and Apache Spark  as an assignment for the Analysis and Desing of Informational Systems class
+Comparison of Python's scaling frameworks, Ray and Apache Spark as an assignment for the Analysis and Design of Information Systems class
 
 ## Researchers
 - Nikolaos Kassaris          03119188 [](https://github.com/)
