@@ -13,7 +13,7 @@ The goal of this research is to provide valuable insights into distributed compu
 Through a series of experiments, we evaluate the performance of these frameworks on different large-scale computational tasks.
 Our experiments focus on the following distributed computing operations:
 - **Graph Operations** (PageRank, Triangle Counting): 
-    --   Implemented the PageRank algorithm on different graph sizes to measure execution time and extract the top 10 most significant nodes in each graph.
+    -   Implemented the PageRank algorithm on different graph sizes to measure execution time and extract the top 10 most significant nodes in             each graph.
     -   Performed triangle counting on multiple graphs.
 - **ETL Operations** on large datasets (CSV processing)
     -   Measured the execution time, efficiency and performance of extract, transform, load, sort operations on large-scale CSV datasets.
