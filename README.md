@@ -1,7 +1,7 @@
 # NTUA-BigData-Spark-Ray
 Comparison of Python's scaling frameworks, Ray and Apache Spark  as an assignment for the Analysis and Desing of Informational Systems class
 
-## Authors
+## Researchers
 - Nikolaos Kassaris          03119188 [](https://github.com/)
 - Konstantinos Vougias       03119144 [](https://github.com/)
 
@@ -36,24 +36,40 @@ To install some additional Ray packages run the command:
 
 `pip install ray[core,data,train,tune]`
 
-## HDFS Apache Spark, and Ray Installation 
+## Installation 
 In order to setup the Hadoop Distributed File System, Yarn and Spark environment on all nodes we followed the guide issued for the Ntua Advanced DB class:
 
 https://colab.research.google.com/drive/1pjf3Q6T-Ak2gXzbgoPpvMdfOHd1GqHZG?usp=sharing
 
 For Ray just install the necessery python packages.
 
-## HDFS, YARN Setup
-Run `start-dfs`, `start-yarn.sh` and `$SPARK_HOME/sbin/start-history-server.sh` on the head node.
+## Setup
+To start the HDFS and connect my nodes to a YARN cluster run
+`start-dfs`, `start-yarn.sh` and `$SPARK_HOME/sbin/start-history-server.sh` on the head node.
 
-## Ray Setup 
 To start a Ray head node and initialize the cluster (with enabled object spilling):
 ```bash
 ray start --head --node-ip-address=[head-node-private-ip-address] --port=6379 --dashboard-host=0.0.0.0 --object-store-memory=2147483648 --system-config='{"automatic_object_spilling_enabled": true, "object_spilling_threshold": 0.8}'
 ```
-
 To attach a worker node on the Ray Cluster after setting up the head node:
 ```bash
 ray start --address=[head-node-private-ip-address]
 ```
+
+## How to Run Experiments 
+For spark scripts:
+    - **Start HDFS, YARN, and Spark** .
+    - **Run the spark script** .
+    
+```bash
+spark-submit --packages "ch.cern.sparkmeasure:spark-measure_2.12:0.23" <script_folder>/<script> <num_executors> <hdfs:filepath> 
+```  
+
+For ray scripts
+    - **Start the Ray cluster** .  
+    - **Run the ray script**:  
+
+```bash
+python3 <script_folder>/<script>.py <hdfs:filepath> # Runs PageRank  
+```  
 
