@@ -12,16 +12,16 @@ This repository contains the necessary data generation instructions and a set of
 The goal of this research is to provide valuable insights into distributed computing using Ray and Apache Spark, highlighting their strengths and weaknesses across various workloads.
 Through a series of experiments, we evaluate the performance of these frameworks on different large-scale computational tasks.
 Our experiments focus on the following distributed computing operations:
-- Graph Operations (PageRank, Triangle Counting): 
+- **Graph Operations** (PageRank, Triangle Counting): 
     --   Implemented the PageRank algorithm on different graph sizes to measure execution time and extract the top 10 most significant nodes in each graph.
-    --   Performed triangle counting on multiple graphs.
-- ETL Operations on large datasets (CSV processing)
-    --   Measured the execution time, efficiency and performance of extract, transform, load, sort operations on large-scale CSV datasets.
-- K-means clustering:
-    --   Measure the frameworks on k-means clustering, using large csv datasets of varying size on performance and clustering quality.
-- Linear Regression prediction:
-    --   Implemented distributed linear regression to predict target variables based on input features.
-    --   Evaluated the frameworks based on training time, prediction accuracy, and scalability across large datasets.
+    -   Performed triangle counting on multiple graphs.
+- **ETL Operations** on large datasets (CSV processing)
+    -   Measured the execution time, efficiency and performance of extract, transform, load, sort operations on large-scale CSV datasets.
+- **K-means clustering**:
+    -   Measure the frameworks on k-means clustering, using large csv datasets of varying size on performance and clustering quality.
+- **Linear Regression prediction**:
+    -   Implemented distributed linear regression to predict target variables based on input features.
+    -   Evaluated the frameworks based on training time, prediction accuracy, and scalability across large datasets.
 
 These tasks were executed with different number of nodes and utilized different dataset sizes and types in order to extract results regarding the frameworks's scalabilities.
 For most of the operations we used datasets with sizes too large to fit in main memory of a single machine. Our cluster consisted of 5 virtual machines each equipped with 4 CPUs and 8GB RAM.
