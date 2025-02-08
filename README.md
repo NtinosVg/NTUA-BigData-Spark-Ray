@@ -36,10 +36,12 @@ To install some additional Ray packages run the command:
 
 `pip install ray[core,data,train,tune]`
 
-## HDFS and Apache Spark Installation 
+## HDFS Apache Spark, and Ray Installation 
 In order to setup the Hadoop Distributed File System, Yarn and Spark environment on all nodes we followed the guide issued for the Ntua Advanced DB class:
 
 https://colab.research.google.com/drive/1pjf3Q6T-Ak2gXzbgoPpvMdfOHd1GqHZG?usp=sharing
+
+For Ray just install the necessery python packages.
 
 ## HDFS, YARN Setup
 Run `start-dfs`, `start-yarn.sh` and `$SPARK_HOME/sbin/start-history-server.sh` on the head node.
