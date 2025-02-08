@@ -41,7 +41,7 @@ In order to setup the Hadoop Distributed File System, Yarn and Spark environment
 
 https://colab.research.google.com/drive/1pjf3Q6T-Ak2gXzbgoPpvMdfOHd1GqHZG?usp=sharing
 
-For Ray just install the necessery python packages.
+For Ray just install the necessary python packages.
 
 ## Setup
 To start the HDFS and connect my nodes to a YARN cluster run
