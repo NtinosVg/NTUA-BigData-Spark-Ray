@@ -62,6 +62,7 @@ ray start --address=[head-node-private-ip-address]
 - **For spark scripts**
       - **Start HDFS, YARN, and Spark** .
       - **Run the spark script**:
+  
 ```bash
 spark-submit --packages "ch.cern.sparkmeasure:spark-measure_2.12:0.23" <script_folder>/<script> <num_executors> <hdfs:filepath> 
 ```
@@ -69,6 +70,7 @@ spark-submit --packages "ch.cern.sparkmeasure:spark-measure_2.12:0.23" <script_f
  **For ray scripts**
       - **Start the Ray cluster** .
       - **Run the ray script**:
+      
 ```bash
 python3 <script_folder>/<script>.py <hdfs:filepath>
 ```
