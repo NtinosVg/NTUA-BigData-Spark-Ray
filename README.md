@@ -70,6 +70,6 @@ For ray scripts
     - **Run the ray script**:  
 
 ```bash
-python3 <script_folder>/<script>.py <hdfs:filepath> # Runs PageRank  
+python3 <script_folder>/<script>.py <hdfs:filepath>
 ```  
 
