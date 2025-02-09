@@ -11,23 +11,47 @@ chmod +x generate_data_to_hdfs.sh
 
 This bash script utilizes the *data_generator.py* script to write to stdout and then redirect the output to an hdfs file.
 
+---
 
-## Graph Data Retrieval-Data Generation
+## Graph Data Retrieval & Data Generation
 
-We found real-world graphs in the **KONECT Project** (http://konect.cc/) website as well as the **Stanford SNAP Project website** (https://snap.stanford.edu/)
-To load them in our hdfs:
-	-	Download the graph tar (using command *wget <link>*)
-	-	Extract the data and remove the header (using command *tar -xvf <tar>* and cli operations)
-	-	Upload it to HDFS (using command *hdfs dfs -put <filepath> <hdfs:filepath>*)
+We found real-world graphs from the **KONECT Project** ([KONECT Website](http://konect.cc/)) and the **Stanford SNAP Project** ([Stanford SNAP Website](https://snap.stanford.edu/)).
 
-To generate the Small-World and Scale-Free graphs you can run the *generate_graph* scripts which utilize NetworkX library:
-We then need to upload them to the hdfs with the usual command.
+### Steps to Load Graph Data into HDFS:
 
-```bash
-python generate_graph_<sf/sw>.py <num_samples> # Generate a small world/scale free graph with (1000*num_samples) nodes
-hdfs dfs -put <filepath> <hdfs:filepath>
-```
-## Hand Gesture Detection System Dataset
+1. Download the graph tar file using:
+   ```bash
+   wget <link>
+   ```
+
+2. Extract the data and remove the header:
+   ```bash
+   tar -xvf <tar>
+   # Additional CLI operations to remove the header
+   ```
+
+3. Upload the processed file to HDFS:
+   ```bash
+   hdfs dfs -put <filepath> <hdfs:filepath>
+   ```
+
+### Generating Small-World and Scale-Free Graphs:
+
+You can generate these graphs using the `generate_graph` scripts, which utilize the **NetworkX** library.
+
+1. Run the script to generate a Small-World or Scale-Free graph:
+   ```bash
+   python generate_graph_<sf/sw>.py <num_samples>
+   ```
+   This will generate a graph with **(1000 × num_samples) nodes**.
+
+2. Upload the generated graph to HDFS:
+   ```bash
+   hdfs dfs -put <filepath> <hdfs:filepath>
+   ```
+   ---
+
+   ## Hand Gesture Detection System Dataset
 
 We found real-world images on **Kaggle** ([Kaggle Website](https://www.kaggle.com/)).
 
@@ -36,8 +60,14 @@ We found real-world images on **Kaggle** ([Kaggle Website](https://www.kaggle.co
 1. Download the dataset zip directly to HDFS using the following command:
    ```bash
    kaggle datasets download marusagar/hand-gesture-detection-system
+   ```
+   
 2. Extract the data into the desired directory:
    ```bash
    unzip hand-gesture-detection-system.zip -d hand-gesture-detection-system
+   ```
+
+
+
 
 
