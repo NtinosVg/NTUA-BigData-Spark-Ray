@@ -26,7 +26,7 @@ Our experiments focus on the following distributed computing operations:
 These tasks were executed with different number of nodes and utilized different dataset sizes and types in order to extract results regarding the frameworks's scalabilities.
 For most of the operations we used datasets with sizes too large to fit in main memory of a single machine. Our cluster consisted of 5 virtual machines each equipped with 4 CPUs and 8GB RAM.
 
-(More complex jobs, like hand gesture detection could also be used to asses the differences in the frameworks but due to time constraints such results were not published)
+(More complex jobs, like hand gesture detection could also be used to assess the differences in the frameworks but due to time constraints such results were not published)
 
 ## Requirements
 In each vm we setup a python virtual environment and installed the necessary python packages. A list of these packages is available on the requirements.txt file. 
