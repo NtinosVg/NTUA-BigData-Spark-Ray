@@ -29,10 +29,15 @@ hdfs dfs -put <filepath> <hdfs:filepath>
 ```
 ## Hand Gesture Detection System Dataset
 
-We found real-world images in **Kaggle** (https://www.kaggle.com/) website.
+We found real-world images on **Kaggle** ([Kaggle Website](https://www.kaggle.com/)).
 
-To load them in our hdfs:
-	-	Download the dataset zip  directly to HDFS (using command *#!/bin/bash kaggle datasets download marusagar/hand-gesture-detection-system*)
-	-	Extract the data (using command *unzip hand-gesture-detection-system.zip -d hand-gesture-detection-system*)
+### Steps to Load the Dataset into HDFS:
+
+1. Download the dataset zip directly to HDFS using the following command:
+   ```bash
+   kaggle datasets download marusagar/hand-gesture-detection-system
+2. Extract the data into the desired directory:
+   ```bash
+   unzip hand-gesture-detection-system.zip -d hand-gesture-detection-system
 
 
