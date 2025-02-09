@@ -33,7 +33,7 @@ df = df.withColumn(
 
 filtered_df = df.filter(length(col("word")) > col("new_feature"))
 
-filtered_df.show(50)
+filtered_df.show(5)
 
 stagemetrics.end()
 stagemetrics.print_report()
