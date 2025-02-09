@@ -12,5 +12,5 @@ ds = ds.groupby("categorical_feature_2") \
        .sum("feature_4")
 
 ds.show(limit=5)
-#print(ds.count())
+
 print("stats:", ds.stats())
