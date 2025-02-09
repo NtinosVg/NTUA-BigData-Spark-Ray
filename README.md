@@ -8,7 +8,7 @@ Comparison of Python's scaling frameworks, Ray and Apache Spark as an assignment
 ## Project Overview
 This repository contains the necessary data generation instructions and a set of scripts used for our research on a comparative analysis of the Ray and Apache Spark frameworks.
 
-##Research Objective
+## Research Objective
 The goal of this research is to provide valuable insights into distributed computing using Ray and Apache Spark, highlighting their strengths and weaknesses across various workloads.
 Through a series of experiments, we evaluate the performance of these frameworks on different large-scale computational tasks.
 Our experiments focus on the following distributed computing operations:
