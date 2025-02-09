@@ -2,7 +2,7 @@
 Comparison of Python's scaling frameworks, Ray and Apache Spark as an assignment for the *Analysis and Design of Information Systems* class
 
 ## Researchers
-- Nikolaos Kassaris          03119188 [el19188]((https://github.com/ntua-el19188/))
+- Nikolaos Kassaris          03119188 [el19188](https://github.com/ntua-el19188/)
 - Konstantinos Vougias       03119144 [NtinosVg](https://github.com/NtinosVg/)
 
 ## Project Overview
