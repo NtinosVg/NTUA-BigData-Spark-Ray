@@ -27,3 +27,12 @@ We then need to upload them to the hdfs with the usual command.
 python generate_graph_<sf/sw>.py <num_samples> # Generate a small world/scale free graph with (1000*num_samples) nodes
 hdfs dfs -put <filepath> <hdfs:filepath>
 ```
+##Hand Gesture Detection System Dataset
+
+We found real-world images in **Kaggle** (https://www.kaggle.com/) website
+To load them in our hdfs:
+	-	Download the dataset zip  directly to HDFS (using command *#!/bin/bash
+kaggle datasets download marusagar/hand-gesture-detection-system*)
+	-	Extract the data (using command *unzip hand-gesture-detection-system.zip -d hand-gesture-detection-system*)
+
+
