@@ -7,7 +7,6 @@ import time
 os.environ['PYSPARK_PYTHON'] = sys.executable
 os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
 
-# Initialize Spark
 sparky = SparkSession \
     .builder \
     .appName("load_data") \
@@ -22,7 +21,6 @@ sc = sparky.sparkContext
 stagemetrics = StageMetrics(sparky)
 stagemetrics.begin()
 
-#df = spark.read.csv("hdfs://okeanos-master:54310/data/generated_data.csv", header=True, inferSchema=True)
 df = sparky.read.format("csv") \
            .option("header", "true") \
            .option("inferSchema", "true") \
@@ -34,7 +32,6 @@ stagemetrics.end()
 stagemetrics.print_report()
 print(stagemetrics.aggregate_stagemetrics())
 
-# memory report needs a bit of time to run...
 patience = 20
 while patience > 0:
     try:
@@ -46,5 +43,4 @@ while patience > 0:
         time.sleep(1)
         patience -= 1
 print("memory report never ready :(")
-# Stop Spark
 sc.stop()
